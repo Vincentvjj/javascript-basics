@@ -19,16 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         fruitLi.innerHTML = fruits[i];
         fruitListE.appendChild(fruitLi);
 
-//        msgElem.innerHTML = fruits[i] + ', ' + msgElem.innerHTML;
+        msgElem.innerHTML += fruits[i];
     }
 
     var animalPic = document.getElementById('animal-picture');
     animalPic.addEventListener('click', function () {
         msgElem.innerHTML = 'woof!';
 
-        while(true) {
+        window.setInterval(function () {
             animalSound.play();
-        }
+        }, 3000)
 
         for (var idx = 0; idx < 11; idx++) {
             alert('');
